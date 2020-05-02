@@ -1,0 +1,130 @@
+body {
+    background-image: url(http://getwallpapers.com/wallpaper/full/7/c/9/41945.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+
+    }
+
+    .twitch {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 20%;
+    }
+
+  h1{
+    color: white; font-size: 60px;
+    font-family: Helvetica;
+    scroll-margin-left: 450px;
+    margin-left: 22%;
+    display: inline-block;
+
+    }
+
+    a{
+      color: white; font-size: 25px;
+    }
+    
+    h2{
+        color: rgb(255, 255, 255); font-size: 30px;
+        font-size: 43px;
+        }
+
+  p{
+    color: rgb(255, 255, 255); font-size: 29px; font-family: Arial;
+  }
+
+  body {
+    color: white;
+  }
+  table {
+    border-collapse: collapse; font-size: 22px;
+   width: 50%;
+   margin: auto;
+   background: black;
+  }
+  
+  table, th, td {
+    border: 1px solid white;
+  }
+  a {
+    color: rgb(42, 192, 252);
+    
+  }
+  
+  .perfil {
+   border-radius: 40%;
+   width: 10%;
+   float: left;
+  }
+  
+.music {
+  float: right; 
+}
+.resumen{
+  text-align: center;
+}
+
+label {
+  font-size: 25px;
+
+}
+.detalles {
+  font-size: 22px;
+}
+details {
+  font-size: 20px;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.des {
+  text-align: center;
+}
+.contenedor {
+  width: 100%;
+  margin: auto;
+}
+
+.fotos_columna {
+  margin: 5px;
+}
+
+.fotos .contenedor {
+  display: grid;
+}
+@media(min-width:520px) {
+  .fotos .contenedor {
+    grid-template-columns: repeat(3,33.3%);
+  }
+}
+img {
+  width: 100%;
+  
+}
+input {
+  width: 300px;
+  height: 35px;
+}
+textarea {
+  width: 600px;
+  height: 70px;
+  margin-top: 5px;
+}
+input, textarea {
+  background: transparent;
+  border: solid 2px #fff;
+  color: #fff;
+}
+input[type=submit]
+{
+  color: #fff;
+}
+::-webkit-input-placeholder
+{
+  color: #fff
+}
