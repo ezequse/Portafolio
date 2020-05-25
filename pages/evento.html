@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="/assets/css/style2.css">
+
+   
+</head>
+<body>
+    <h1 class="text">¿Te gustan los animales? <br> ¡Dales click y disfruta!</h1>
+<button class="asda" id="boton">Lobo</button>
+<button class="asdb" id="boton2">Perro</button>
+<button class="asdc" id="boton3">Gato</button>
+<button class="asdd" id="boton4">Gallo</button>
+<button class="asde" id="boton5">Caballo</button>
+<audio id="sonido-lobo" src="/media/lobo.WAV"></audio>
+<audio id="sonido-perro" src="/media/perro.WAV"></audio>
+<audio id="sonido-gato" src="/media/gato01.WAV"></audio>
+<audio id="sonido-gallo" src="/media/gallo (a la mañana).WAV"></audio>
+<audio id="sonido-caballo" src="/media/caballo.WAV"></audio>
+
+
+
+    <script>
+        document.getElementById("boton").onclick = sonidolobo;
+        function sonidolobo(){
+            var sonidoLobo = document.getElementById("sonido-lobo");
+            sonidoLobo.play();
+        }
+        document.getElementById("boton2").onclick = sonidoperro;
+        function sonidoperro(){
+            var sonidoPerro = document.getElementById("sonido-perro");
+            sonidoPerro.play();
+        }
+        document.getElementById("boton3").onclick = sonidogato;
+        function sonidogato(){
+            var sonidoGato = document.getElementById("sonido-gato");
+            sonidoGato.play();
+        }
+        document.getElementById("boton4").onclick = sonidogallo;
+        function sonidogallo(){
+            var sonidoGallo = document.getElementById("sonido-gallo");
+            sonidoGallo.play();
+        }
+        document.getElementById("boton5").onclick = sonidocaballo;
+        function sonidocaballo(){
+            var sonidoCaballo = document.getElementById("sonido-caballo");
+            sonidoCaballo.play();
+        }
+</script>
+ </body>
+ </html>
+
+
+

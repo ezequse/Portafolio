@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuncionPropia</title>
+    <link rel="stylesheet" href="/assets/css/style5.css">
+</head>
+<body>
+    <h2>Calculadora basica virtual</h2>
+    <h4 class="two">Primer numero - Segundo numero</h4>
+    <form>
+        <input id="primernumero" class="this" value="1" name="test1" autocomplete="" type="number"  placeholder="Primer numero:"/>
+        <input id="segundonumero" class="this2" value="1" type="number" placeholder="Segundo numero:" />
+        <br>
+        <input type="button" id="suma" value="Suma">
+        
+        <input type="button" id="resta" value="Resta">
+        <br>
+        <input type="button" id="multiplicacion" value="Multiplicacion">
+        
+        <input type="button" id="division" value="Division">
+        <br>
+    </form>
+    <script>
+
+        document.getElementById("suma").onclick = sumar;
+        function sumar(){
+        var n1 = parseInt(document.getElementById("primernumero").value);
+        var n2 = parseInt(document.getElementById("segundonumero").value);
+        var suma = n1 + n2;
+        var undefined;
+
+                alert("El resultado de la suma es " + suma);
+        }
+
+        document.getElementById("resta").onclick = restar;
+        function restar(){
+        var n1 = parseInt(document.getElementById("primernumero").value);
+        var n2 = parseInt(document.getElementById("segundonumero").value);
+        var resta = n1 - n2;
+        alert("El resultado de la resta es " + resta)
+        }
+
+        document.getElementById("multiplicacion").onclick = multiplicar;
+        function multiplicar(){
+        var n1 = parseInt(document.getElementById("primernumero").value);
+        var n2 = parseInt(document.getElementById("segundonumero").value);
+        var multiplo = n1 * n2;
+        alert("El resultado de la multiplicacion es " + multiplo)
+        }
+
+        document.getElementById("division").onclick = dividir;
+        function dividir(){
+        var n1 = parseInt(document.getElementById("primernumero").value);
+        var n2 = parseInt(document.getElementById("segundonumero").value);
+        var multiplo = n1 / n2;
+        alert("El resultado de la division es " + multiplo)
+        }
+
+        
+    </script>
+</body>
+</html>

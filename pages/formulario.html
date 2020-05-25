@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/assets/css/style4.css">
+</head>
+<body>
+        <h2>Complete con sus datos.</h2>
+        <form action="" method="prueba">
+        <input type="nombre" id="nombre" placeholder="Nombre" required>
+        <br>
+        <input type="Apellido" id="apellido" placeholder="Apellido" required>
+        <br>
+        <input type="deporte" id="deporte" placeholder="Deporte favorito" required>
+        <br>
+        <input type="pasatiempo" id="pasatiempo" placeholder="Actividad de ocio" required>
+        <br>
+        <button id="enviar">Enviar</button>
+        </form>
+
+    <script>
+        
+
+        document.getElementById("enviar").onclick = mostrar;
+            function mostrar(){
+        var n = document.getElementById("nombre").value;
+        var a = document.getElementById("apellido").value;
+        var d = document.getElementById("deporte").value;
+        var p = document.getElementById("pasatiempo").value;
+        var resultado;
+            if (n == "" || a == "" || d == "" || p == "") {
+                alert ("Error, Debe ingresar los datos.")
+            } else 
+                alert("Hola " + n + " " + a + "! tambien creemos que el " + d + " es genial!" + " ¿Tu actividad de ocio es " + p + "? Eso es increible!");
+            
+
+
+            
+            
+            
+            }
+            
+            
+
+  
+            
+            
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIVIA!</title>
+    <link rel="stylesheet" href="/assets/css/style3.css">
+</head>
+<body>
+    <h2 id="question"></h2>
+    <input type="text" id="info">
+    <button id="buton">Siguiente</button>
+    <p id="resolver"></p>
+    <h3>Aclaracion: Se debe escribir la respuesta y no la letra, ademas esta debe ser ingresada respetando mayusculas y acentos, de lo contrario sera erronea.</h3>
+
+
+    <script>
+        var preguntas = [
+            ["¿Cual de los siguientes superheroes puede trepar paredes? <br> A:Ironman <br> B:Spiderman <br> C:Batman", "Spiderman"],
+            ["¿Quien gano la copa Libertadores 2014? <br> A:San Lorenzo <br> B:River <br> C:Boca", "San Lorenzo"],
+            ["3.¿Cuantas provincias tiene Argentina? <br> A:21 <br> B:23 <br> C:25", "23"],
+            ["¿Que se celebra el 25 de mayo? <br> A:Dia de la Patria <br> B:Dia del Veterano y de los Caídos en la guerra de Malvinas <br> C:Dia del trabajador", "Dia de la Patria"],
+            ["¿En que año se creo la UNRaf? <br> A:2011 <br> B:2014 <br> C:2009", "2014"],
+
+        ],
+        pregunta, respuesta,
+        hechas = 0,
+        correctas = 0;
+
+        hacerpregunta();
+        
+
+        document.getElementById("buton").addEventListener("click", function(){
+            var ingreso = document.getElementById("info").value;
+            if(ingreso == respuesta){
+                correctas++;
+            }
+
+            if(hechas < 5){
+                hacerpregunta();
+            }
+            else{
+                Mostrarpuntos();
+            }
+        });
+        console.log(correctas)
+
+            function hacerpregunta(){
+             var aux;
+             aux = preguntas.splice (aleatorio(0, preguntas.length-1), 1);
+             pregunta = aux[0] [0];
+             respuesta = aux[0] [1];
+             document.getElementById("question").innerHTML = pregunta;
+             document.getElementById("info").value = "";
+             hechas++;
+            }
+
+            function aleatorio(min, max){
+                return Math.floor( Math.random() * (max - min + 1)) + min;
+            }
+
+            function Mostrarpuntos(){
+                var resultado;
+                switch(correctas){
+                    case 0:
+                    resultado = "No se respondio bien ninguna pregunta";
+                    break;
+                    case 1: 
+                    resultado = "Se acertó 1 pregunta de 5";
+                    break;
+                    case 2: 
+                    resultado = "Se acertaron 2 preguntas de 5";
+                    break;
+                    case 3: resultado = "Se acertaron 3 preguntas de 5";
+                    break;
+                    case 4: resultado = "Se acertaron 4 preguntas de 5";
+                    break;
+                    case 5: resultado = "Se acertaron 5 preguntas de 5";
+                    break;
+                }
+                document.getElementById("resolver").innerHTML = resultado;
+            }
+        
+            
+            
+            
+            
+
+
+            
+            //document.body.style.backgroundColor = "red";
+            //setInterval(function(){ alert("Hello");}, 5000);
+        
+
+    </script>
+</body>
+</html>

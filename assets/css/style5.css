@@ -1,0 +1,27 @@
+.two {
+    margin-left: auto;
+    color: black;
+    font-size: 30px;
+    font-family: fantasy;
+}
+
+.this {
+    width: 201px;
+}
+
+.this2 {
+    width: 201px;
+}
+
+body {
+    background-image: url(/images/qwe.jpg);
+     background-attachment: fixed;
+     background-repeat: no-repeat; 
+     background-size: 100% 100%;
+    
+     } 
+h2 {
+    color: black;
+    font-size: 40px;
+    font-family: fantasy;
+}
