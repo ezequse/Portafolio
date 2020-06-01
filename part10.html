@@ -156,9 +156,10 @@ child.setBounceY(Phaser.Math.FloatBetween(1, 1));
 function update ()
 {
     if  (cursors.space.isDown){
-        this.registry.destroy(); // destroy registry
-this.events.off();﻿ // disable all active events
-this.scene.restart();﻿﻿﻿﻿ // restart current scene
+        this.registry.destroy();
+        this.events.off();
+        this.scene.restart();
+        score = 0;
 
     }
     
